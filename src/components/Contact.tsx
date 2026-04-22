@@ -35,7 +35,8 @@ const Contact = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-
+            {/* Left — Contact Details */}
+            <div>
               {/* Contact Details */}
               <div className="space-y-5">
                 <div className="flex items-center">
@@ -72,7 +73,7 @@ const Contact = () => {
               </div>
 
               {/* Social */}
-              <div>
+              <div className="mt-8">
                 <h4 className="text-lg font-semibold text-white mb-4">Find Me Online</h4>
                 <div className="flex space-x-4">
                   <a href="https://github.com/Areeba-Khaliq" target="_blank" rel="noopener noreferrer"
