@@ -44,13 +44,13 @@ const About = () => {
             {/* Left — Bio */}
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm a software engineer specialising in <span className="text-purple-400 font-semibold">AI/ML systems</span> and <span className="text-pink-400 font-semibold">full-stack development</span>. I build end-to-end products — from training deep learning models to shipping them behind clean, functional interfaces.
+                I'm a software engineer specialising in <span className="text-purple-400 font-semibold">AI/ML systems</span> and <span className="text-pink-400 font-semibold">full-stack development</span>. I build end-to-end products, from training deep learning models to shipping them behind clean, functional interfaces.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                My work spans computer vision, NLP, backend APIs, and data pipelines. I care about writing clean, maintainable code and building things that actually work in production — not just in notebooks.
+                My work spans computer vision, NLP, backend APIs, and data pipelines. I care about writing clean, maintainable code and building things that actually work in production, not just in notebooks.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Currently finalising my deep learning Final Year Project, <span className="text-purple-400 font-semibold">AcneAI</span> — a CNN-based acne severity classifier with personalised treatment recommendations — while actively looking for graduate engineering roles.
+                Currently finalising my deep learning Final Year Project, <span className="text-purple-400 font-semibold">AcneAI</span>, a CNN-based acne severity classifier with personalised treatment recommendations — while actively looking for graduate engineering roles.
               </p>
 
               {/* Location + availability */}
