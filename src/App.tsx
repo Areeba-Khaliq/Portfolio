@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import FYP from './components/FYP';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
