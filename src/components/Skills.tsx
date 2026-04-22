@@ -4,69 +4,70 @@ import { Code, Database, Wrench, Brain } from 'lucide-react';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Languages & Frameworks",
+      title: 'Languages & Frameworks',
       icon: Code,
-      skills: ["C", "C++", "Python", "Java", "SQL", "HTML", "CSS", "JavaScript", "React", "Next.js", "Django"],
-      color: "from-blue-500 to-blue-700"
+      color: 'from-blue-500 to-blue-700',
+      skills: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'C++', 'Java', 'React', 'Next.js', 'Django', 'HTML', 'CSS'],
     },
     {
-      title: "Tools & Technologies",
-      icon: Wrench,
-      skills: ["VS Code", "Linux", "Git", "GitHub", "Google Colab", "Jupyter Notebook", "Apache Tomcat"],
-      color: "from-green-500 to-green-700"
-    },
-    {
-      title: "Data Science & ML",
+      title: 'AI / ML & Data',
       icon: Database,
-      skills: ["Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Machine Learning", "Data Analysis"],
-      color: "from-purple-500 to-purple-700"
+      color: 'from-purple-500 to-purple-700',
+      skills: ['TensorFlow', 'OpenCV', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'CNN', 'NLP', 'Data Augmentation'],
     },
     {
-      title: "Soft Skills",
+      title: 'Tools & Infrastructure',
+      icon: Wrench,
+      color: 'from-green-500 to-green-700',
+      skills: ['Git', 'GitHub', 'Linux', 'Vercel', 'Render', 'Jupyter', 'Google Colab', 'Postman', 'VS Code'],
+    },
+    {
+      title: 'Engineering Practices',
       icon: Brain,
-      skills: ["Problem-solving", "Creativity", "Algorithm Design", "Communication", "Team Collaboration"],
-      color: "from-pink-500 to-pink-700"
-    }
+      color: 'from-pink-500 to-pink-700',
+      skills: ['REST APIs', 'Database Design', 'Model Evaluation', 'Agile', 'Code Review', 'System Design', 'Problem Solving'],
+    },
   ];
 
   return (
     <section id="skills" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
+
+          {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Skills</span>
+              Technical{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                Stack
+              </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-              A comprehensive toolkit for building modern applications and solving complex problems
+              Tools and technologies I use to design, build, and ship products
             </p>
           </div>
 
-          {/* Skills Grid */}
+          {/* Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {skillCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
                 <div
                   key={index}
-                  className="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:scale-[1.02]"
                 >
-                  {/* Category Header */}
                   <div className="flex items-center mb-6">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>
-                      <IconComponent className="text-white" size={24} />
+                      <IconComponent className="text-white" size={22} />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                    <h3 className="text-lg font-bold text-white">{category.title}</h3>
                   </div>
-
-                  {/* Skills List */}
-                  <div className="flex flex-wrap gap-3">
-                    {category.skills.map((skill, skillIndex) => (
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
                       <span
-                        key={skillIndex}
-                        className="px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-purple-400 hover:text-purple-400 transition-all duration-300 cursor-default"
+                        key={skill}
+                        className="px-3 py-1.5 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-purple-400 hover:text-purple-400 transition-all duration-300 cursor-default"
                       >
                         {skill}
                       </span>
@@ -76,6 +77,7 @@ const Skills = () => {
               );
             })}
           </div>
+
         </div>
       </div>
     </section>
