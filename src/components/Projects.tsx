@@ -94,7 +94,7 @@ const Projects = () => {
                     </div>
 
                     <div className="flex space-x-4">
-                      
+                    <a  
                         href={project.github}
                         className="flex items-center px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition-all duration-300 group/btn"
                       >
@@ -103,6 +103,7 @@ const Projects = () => {
                       </a>
                       {project.demo !== "#" && (
                         
+                        <a
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -124,7 +125,7 @@ const Projects = () => {
             <p className="text-gray-400 mb-6">
               All projects are open source — explore the code or reach out to collaborate.
             </p>
-            
+            <a
               href="https://github.com/Areeba-Khaliq"
               target="_blank"
               rel="noopener noreferrer"
