@@ -12,7 +12,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Replace this with your preferred form handler e.g. Formspree, EmailJS
     setSubmitted(true);
     setFormData({ name: '', email: '', message: '' });
     setTimeout(() => setSubmitted(false), 4000);
@@ -30,13 +29,13 @@ const Contact = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-              Open to graduate roles in AI/ML and web Dev.Let's connect for future oppertunities
+              Open to graduate roles in AI/ML and web Dev. Let's connect for future opportunities.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-
-              {/* Contact Details */}
+            {/* Left Column — Contact Details & Socials */}
+            <div className="space-y-12">
               <div className="space-y-5">
                 <div className="flex items-center">
                   <div className="p-3 bg-purple-600 rounded-lg mr-4">
@@ -91,7 +90,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right — Form */}
+            {/* Right Column — Form */}
             <div className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
 
@@ -142,9 +141,9 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
-    
+          </div> {/* Closes Grid */}
+        </div> {/* Closes max-w-6xl */}
+      </div> {/* Closes container */}
     </section>
   );
 };
