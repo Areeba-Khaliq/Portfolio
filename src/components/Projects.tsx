@@ -53,7 +53,7 @@ const Projects = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-              End-to-end products and systems — from model training to live deployments
+              End-to-end products and systems, from model training to live deployments
             </p>
           </div>
 
@@ -122,9 +122,6 @@ const Projects = () => {
 
           {/* CTA */}
           <div className="text-center mt-16">
-            <p className="text-gray-400 mb-6">
-              All projects are open source — explore the code or reach out to collaborate.
-            </p>
             <a
               href="https://github.com/Areeba-Khaliq"
               target="_blank"
