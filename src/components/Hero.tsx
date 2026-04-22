@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="mb-10 inline-block">
           <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mx-auto shadow-2xl ring-4 ring-purple-400 ring-opacity-50">
             <img
-              src="/areeba_img.jpeg"
+              src="/areeba_img (2).jpeg"
               alt="Areeba Khaliq"
               className="w-full h-full object-cover"
             />
