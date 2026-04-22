@@ -4,7 +4,7 @@ import { Download, Award, Briefcase, GraduationCap, Trophy } from 'lucide-react'
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/AREEBA_KHALIQ_CV.pdf';
+    link.href = '/AREEBA_KHALIQ_Resume.pdf';
     link.download = 'Areeba_Khaliq_CV.pdf';
     link.click();
   };
@@ -53,9 +53,7 @@ const Resume = () => {
               </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
-            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-              GPA 3.71 / 4.0 · 2 live deployments · 1 hackathon finalist · graduating May 2026
-            </p>
+            
           </div>
 
           <div className="space-y-6">
@@ -77,8 +75,8 @@ const Resume = () => {
                   </p>
                 </div>
                 <div className="text-right flex-shrink-0">
-                  <p className="text-green-400 font-bold text-lg">3.71 / 4.0</p>
-                  <p className="text-gray-400 text-sm">2022 – 2026</p>
+                  <p className="text-green-400 font-bold text-lg">3.47 / 4.0</p>
+                  <p className="text-gray-400 text-sm">2022 - 2026</p>
                 </div>
               </div>
             </div>
