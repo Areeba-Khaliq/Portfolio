@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Heart Disease Prediction Model",
-      description: "Built using UCI dataset with 98.54% accuracy. Compared ML algorithms like Decision Tree, SVM, KNN, Logistic Regression using Python libraries.",
+      description: "Engineered a clinical risk classification system achieving 98.54% accuracy on the UCI Heart Disease dataset. Benchmarked Decision Tree, SVM, KNN, and Logistic Regression models — with full evaluation via precision, recall, and ROC analysis.",
       tech: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
       icon: Heart,
       color: "from-red-500 to-pink-500",
@@ -14,8 +14,8 @@ const Projects = () => {
     },
     {
       title: "Hostel Management System",
-      description: "Web app for hostel operations: room allocation, fee tracking, and comprehensive management system for educational institutions.",
-      tech: ["Django", "SQLite3", "HTML", "CSS"],
+      description: "Designed and built a full-stack operations platform handling room allocation, fee tracking, and resident records. Architected a normalised relational database schema and implemented role-based access for admin and staff users.",
+      tech: ["Django", "SQLite3", "Python", "HTML/CSS"],
       icon: Home,
       color: "from-blue-500 to-cyan-500",
       github: "#",
@@ -23,8 +23,8 @@ const Projects = () => {
     },
     {
       title: "ResuMate",
-      description: "AI-powered resume builder built for a hackathon. Features AI-driven section generation and is hosted on Vercel for easy access.",
-      tech: ["Next.js", "Grok AI", "HTML", "CSS"],
+      description: "Shipped an AI-powered resume generation platform at a hackathon — live on Vercel. Integrated Grok AI to dynamically generate tailored resume sections from user input, reducing manual writing time significantly.",
+      tech: ["Next.js", "Grok AI", "TypeScript", "CSS"],
       icon: FileText,
       color: "from-green-500 to-emerald-500",
       github: "#",
@@ -32,8 +32,8 @@ const Projects = () => {
     },
     {
       title: "AgentForce",
-      description: "AI assistant for internal IT support using Salesforce Agentforce and FastAPI. Built during a hackathon to streamline support processes.",
-      tech: ["HTML", "CSS", "JavaScript", "FastAPI"],
+      description: "Deployed an agentic AI system for internal IT support automation using Salesforce Agentforce and a FastAPI backend. Handles multi-step support queries autonomously — live on Render.",
+      tech: ["FastAPI", "JavaScript", "Salesforce Agentforce", "HTML/CSS"],
       icon: Bot,
       color: "from-purple-500 to-indigo-500",
       github: "#",
@@ -45,14 +45,15 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
+
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Projects</span>
+              Shipped <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Projects</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-              A showcase of my technical skills and creative problem-solving through real-world applications
+              End-to-end products and systems — from model training to live deployments
             </p>
           </div>
 
@@ -65,11 +66,9 @@ const Projects = () => {
                   key={index}
                   className="group bg-gray-800 rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
-                  {/* Project Header */}
                   <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
-                  
+
                   <div className="p-8">
-                    {/* Icon and Title */}
                     <div className="flex items-center mb-4">
                       <div className={`p-3 rounded-lg bg-gradient-to-r ${project.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
                         <IconComponent className="text-white" size={24} />
@@ -79,12 +78,10 @@ const Projects = () => {
                       </h3>
                     </div>
 
-                    {/* Description */}
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       {project.description}
                     </p>
 
-                    {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tech.map((tech, techIndex) => (
                         <span
@@ -96,9 +93,8 @@ const Projects = () => {
                       ))}
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="flex space-x-4">
-                      <a
+                      
                         href={project.github}
                         className="flex items-center px-4 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition-all duration-300 group/btn"
                       >
@@ -106,7 +102,7 @@ const Projects = () => {
                         Code
                       </a>
                       {project.demo !== "#" && (
-                        <a
+                        
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -123,21 +119,22 @@ const Projects = () => {
             })}
           </div>
 
-          {/* Call to Action */}
+          {/* CTA */}
           <div className="text-center mt-16">
             <p className="text-gray-400 mb-6">
-              Want to see more of my work or collaborate on a project?
+              All projects are open source — explore the code or reach out to collaborate.
             </p>
-            <a
+            
               href="https://github.com/Areeba-Khaliq"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Github size={20} className="mr-2" />
-              Visit My GitHub
+              View All on GitHub
             </a>
           </div>
+
         </div>
       </div>
     </section>
