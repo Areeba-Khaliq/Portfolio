@@ -13,7 +13,7 @@ const Resume = () => {
     {
       role: 'Machine Learning Engineer',
       org: 'FYP Research · University of the Punjab',
-      period: 'Oct 2025 – Apr 2026',
+      period: 'Oct 2025 - Apr 2026',
       points: [
         'Trained CNN-based deep learning models with TensorFlow & OpenCV for acne severity classification',
         'Built image preprocessing pipelines with data augmentation across diverse skin tone datasets',
@@ -104,7 +104,7 @@ const Resume = () => {
                     <ul className="space-y-2">
                       {exp.points.map((point, j) => (
                         <li key={j} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
-                          <span className="text-purple-400 mt-0.5 flex-shrink-0">→</span>
+                          <span className="text-purple-400 mt-0.5 flex-shrink-0">.</span>
                           {point}
                         </li>
                       ))}
@@ -144,7 +144,7 @@ const Resume = () => {
                 <Download size={20} className="mr-2" />
                 Download Full CV
               </button>
-              <p className="text-gray-500 text-sm mt-3">PDF · Last updated April 2026</p>
+             
             </div>
 
           </div>
