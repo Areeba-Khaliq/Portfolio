@@ -4,7 +4,7 @@ import { Download, Award, Briefcase, GraduationCap, Trophy } from 'lucide-react'
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/AREEBA_KHALIQ_Resume.pdf';
+    link.href = '/AreebaKhaliq_Resume.pdf';
     link.download = 'Areeba_Khaliq_CV.pdf';
     link.click();
   };
