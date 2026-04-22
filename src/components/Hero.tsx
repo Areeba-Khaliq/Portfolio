@@ -15,29 +15,48 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        {/* Profile Image - moved down with more margin */}
-        <div className="mb-12 inline-block mt-8">
+
+        {/* ✦ NEW: Available badge */}
+        <div className="mb-8 mt-8 inline-flex items-center gap-2 px-4 py-1.5 bg-purple-900/40 border border-purple-500/30 rounded-full">
+          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span className="text-xs text-purple-300 tracking-widest uppercase">Available for Graduate Roles · May 2026</span>
+        </div>
+
+        {/* Profile Image */}
+        <div className="mb-10 inline-block">
           <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mx-auto shadow-2xl ring-4 ring-purple-400 ring-opacity-50">
-            <img 
-              src="/image.png" 
-              alt="Areeba Khaliq" 
+            <img
+              src="/image.png"
+              alt="Areeba Khaliq"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Name */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
           Areeba <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Khaliq</span>
         </h1>
-        
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Computer Science Student | <span className="text-purple-400">Aspiring Developer</span>
+
+        {/* ✦ UPDATED: More specific title */}
+        <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+          CS Graduate · <span className="text-purple-400">AI/ML Engineer</span> · Full-Stack Developer
         </p>
 
-        <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-          Building the future through code, one project at a time
+        {/* ✦ UPDATED: Mention AcneAI FYP */}
+        <p className="text-base text-gray-400 mb-4 max-w-2xl mx-auto">
+          Final-year student at University of the Punjab, building intelligent systems at the intersection of deep learning and product engineering.
         </p>
+
+        {/* ✦ NEW: FYP callout pill */}
+        <div className="mb-10">
+          <span
+            onClick={() => scrollToSection('fyp')}
+            className="cursor-pointer inline-flex items-center gap-2 px-4 py-1.5 bg-pink-900/30 border border-pink-500/30 rounded-full text-xs text-pink-300 hover:bg-pink-900/50 transition-all duration-300"
+          >
+            🧠 FYP: AcneAI — CNN-based acne severity detection & treatment recommendation
+          </span>
+        </div>
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -57,7 +76,7 @@ const Hero = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-12">
-          <a
+          
             href="https://github.com/Areeba-Khaliq"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,7 +84,7 @@ const Hero = () => {
           >
             <Github size={24} />
           </a>
-          <a
+          
             href="https://www.linkedin.com/in/areeba-khaliq/"
             target="_blank"
             rel="noopener noreferrer"
@@ -73,7 +92,7 @@ const Hero = () => {
           >
             <Linkedin size={24} />
           </a>
-          <a
+          
             href="mailto:areeeba.khaliq@gmail.com"
             className="p-3 rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-red-600 transition-all duration-300 transform hover:scale-110"
           >
