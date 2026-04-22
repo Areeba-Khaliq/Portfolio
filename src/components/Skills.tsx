@@ -19,7 +19,7 @@ const Skills = () => {
       title: 'Tools & Infrastructure',
       icon: Wrench,
       color: 'from-green-500 to-green-700',
-      skills: ['Git', 'GitHub', 'Linux', 'Vercel', 'Render', 'Jupyter', 'Google Colab', 'Postman', 'VS Code'],
+      skills: ['Git', 'GitHub', 'Linux', 'Vercel', 'Render', 'Jupyter', 'Google Colab', 'VS Code'],
     },
     {
       title: 'Engineering Practices',
@@ -44,7 +44,7 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-              Tools and technologies I use to design, build, and ship products
+              Tools and technologies I use to design and build.
             </p>
           </div>
 
