@@ -36,21 +36,6 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
 
-            {/* Left — Info */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Get In Touch</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Whether you have a role to discuss, a project to build, or just want to connect — my inbox is open. I respond within 24 hours.
-                </p>
-              </div>
-
-              {/* Availability badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-900/20 border border-green-700/30 rounded-full">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                <span className="text-green-400 text-sm">Available for opportunities</span>
-              </div>
-
               {/* Contact Details */}
               <div className="space-y-5">
                 <div className="flex items-center">
@@ -71,7 +56,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">Lahore, Pakistan · Open to remote</p>
+                    <p className="text-white">Lahore, Pakistan</p>
                   </div>
                 </div>
 
