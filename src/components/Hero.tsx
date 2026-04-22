@@ -16,17 +16,12 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
 
-        {/* ✦ NEW: Available badge */}
-        <div className="mb-8 mt-8 inline-flex items-center gap-2 px-4 py-1.5 bg-purple-900/40 border border-purple-500/30 rounded-full">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span className="text-xs text-purple-300 tracking-widest uppercase">Available for Graduate Roles · May 2026</span>
-        </div>
 
         {/* Profile Image */}
         <div className="mb-10 inline-block">
           <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mx-auto shadow-2xl ring-4 ring-purple-400 ring-opacity-50">
             <img
-              src="/image.png"
+              src="/areeba_img.jpeg"
               alt="Areeba Khaliq"
               className="w-full h-full object-cover"
             />
@@ -43,18 +38,13 @@ const Hero = () => {
           CS Graduate · <span className="text-purple-400">AI/ML Engineer</span> · Full-Stack Developer
         </p>
 
-        {/* ✦ UPDATED: Mention AcneAI FYP */}
-        <p className="text-base text-gray-400 mb-4 max-w-2xl mx-auto">
-          Final-year student at University of the Punjab, building intelligent systems at the intersection of deep learning and product engineering.
-        </p>
-
         {/* ✦ NEW: FYP callout pill */}
         <div className="mb-10">
           <span
             onClick={() => scrollToSection('fyp')}
             className="cursor-pointer inline-flex items-center gap-2 px-4 py-1.5 bg-pink-900/30 border border-pink-500/30 rounded-full text-xs text-pink-300 hover:bg-pink-900/50 transition-all duration-300"
           >
-            🧠 FYP: AcneAI — CNN-based acne severity detection & treatment recommendation
+            FYP: AcneAI CNN-based acne severity detection & treatment recommendation
           </span>
         </div>
 
