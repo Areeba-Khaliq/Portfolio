@@ -24,11 +24,11 @@ const Footer = () => {
                 <h3 className="text-xl font-bold text-white">Areeba Khaliq</h3>
               </div>
               <p className="text-gray-400 leading-relaxed text-sm">
-                AI/ML Engineer & Full-Stack Developer. Building intelligent systems and shipping products that work.
+                AI/ML Engineer & Full-Stack Developer
               </p>
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-green-900/20 border border-green-700/30 rounded-full text-xs text-green-400">
                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-                Open to work · May 2026
+                Open to work
               </span>
             </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-500 text-sm">
-              © {currentYear} Areeba Khaliq · Designed & built by me
+              © {currentYear} Areeba Khaliq 
             </p>
 
             <button
