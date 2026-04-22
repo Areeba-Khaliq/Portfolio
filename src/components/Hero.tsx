@@ -74,17 +74,18 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Social Links */}
+       {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-12">
           
-            href="https://github.com/Areeba-Khaliq"
+           <a
+             href="https://github.com/Areeba-Khaliq"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
           >
             <Github size={24} />
           </a>
-          
+          <a
             href="https://www.linkedin.com/in/areeba-khaliq/"
             target="_blank"
             rel="noopener noreferrer"
@@ -92,7 +93,7 @@ const Hero = () => {
           >
             <Linkedin size={24} />
           </a>
-          
+          <a
             href="mailto:areeeba.khaliq@gmail.com"
             className="p-3 rounded-full bg-gray-800 text-gray-300 hover:text-white hover:bg-red-600 transition-all duration-300 transform hover:scale-110"
           >
