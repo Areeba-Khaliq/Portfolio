@@ -35,7 +35,7 @@ const FYP = () => {
                     <Brain className="text-white" size={28} />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 tracking-widest uppercase">Oct 2025 – Apr 2026</p>
+                    <p className="text-xs text-gray-500 tracking-widest uppercase">Oct 2025 - Apr 2026</p>
                     <p className="text-xs text-purple-400 tracking-widest uppercase">University of the Punjab, Lahore</p>
                   </div>
                 </div>
@@ -48,7 +48,7 @@ const FYP = () => {
                 </h3>
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   A deep learning system that detects and classifies acne severity from facial images
-                  into mild, moderate, and severe categories — then generates personalised skincare
+                  into mild, moderate, and severe categories-then generates personalised skincare
                   treatment recommendations based on the classification output.
                 </p>
 
@@ -60,7 +60,7 @@ const FYP = () => {
                     'Evaluated performance using precision, recall, F1-score, and confusion matrix analysis',
                   ].map((point, i) => (
                     <li key={i} className="flex gap-3 text-sm text-gray-400 leading-relaxed">
-                      <span className="text-purple-400 mt-0.5 flex-shrink-0">→</span>
+                      <span className="text-purple-400 mt-0.5 flex-shrink-0"></span>
                       {point}
                     </li>
                   ))}
@@ -121,7 +121,7 @@ const FYP = () => {
                 <div className="bg-purple-900/20 border border-purple-500/20 rounded-xl p-4">
                   <p className="text-xs text-purple-400 tracking-widest uppercase mb-1">Evaluation Metrics</p>
                   <p className="text-xs text-gray-400 leading-relaxed">
-                    Precision · Recall · F1-Score · Confusion Matrix — iteratively improved across all severity classes.
+                    Precision · Recall · F1-Score · Confusion Matrix - iteratively improved across all severity classes.
                   </p>
                 </div>
 
