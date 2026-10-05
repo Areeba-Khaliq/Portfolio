@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { profile, honors, scholarships, education, research, projects, teaching, skills } from './data';
-import { Section, Entry, Bullets, A } from './components/Section';
+import { Section, Entry, A } from './components/Section';
 
 const nav = [
   ['honors', 'Honors'],
@@ -23,7 +23,9 @@ function App() {
           <img src="/areeba_img (2).jpeg" alt="Areeba Khaliq" className="w-24 h-24 object-cover shrink-0 border border-stone-300" />
           <div>
             <h1 className="font-serif text-4xl text-stone-900">{profile.name}</h1>
-            <p className="mt-2 text-stone-600 max-w-xl">{profile.tagline}</p>
+            <div className="mt-2 space-y-2 text-stone-700 max-w-xl">
+              {profile.bio.map(p => <p key={p}>{p}</p>)}
+            </div>
           </div>
         </div>
         <p className="mt-6 text-sm text-stone-600 flex flex-wrap gap-x-4 gap-y-1">
@@ -46,7 +48,11 @@ function App() {
 
       <main className="max-w-3xl mx-auto px-6">
         <Section id="honors" title="Honors & Achievements">
-          <Bullets items={honors.map(h => h.href ? <A href={h.href}>{h.text}</A> : h.text)} />
+          {honors.map(h => (
+            <Entry key={h.title} title={<A href={h.href}>{h.title}</A>} date={h.date}>
+              <p className="text-stone-700">{h.text}</p>
+            </Entry>
+          ))}
           <h3 className="mt-7 mb-3 text-sm text-stone-500">Scholarships</h3>
           {scholarships.map(s => (
             <Entry key={s.title} title={s.href ? <A href={s.href}>{s.title}</A> : s.title} meta={s.org} date={s.date}>
@@ -60,25 +66,21 @@ function App() {
             <p className="text-stone-700"><A href={education.gpa.href}>{education.gpa.text}</A></p>
           </Entry>
           <Entry title={<A href={education.fyp.href}>{education.fyp.title}</A>}>
-            <Bullets items={education.fyp.points} />
+            <div className="space-y-3 text-stone-700">{education.fyp.text.map(t => <p key={t}>{t}</p>)}</div>
           </Entry>
         </Section>
 
         <Section id="research" title="Research Experience">
-          <Entry title={research.title} meta={research.kind} date={research.period}>
-            <Bullets items={research.points} />
+          <Entry title={research.title} date={research.period}>
+            <div className="space-y-3 text-stone-700">{research.text.map(t => <p key={t}>{t}</p>)}</div>
           </Entry>
         </Section>
 
         <Section id="projects" title="Projects">
           {projects.map(p => (
-            <Entry key={p.title} title={p.title} meta={p.stack ? `${p.venue}. ${p.stack}` : p.venue} date={p.date}>
-              <Bullets items={p.points.map(pt => (
-                <>
-                  {pt.label && (pt.href ? <A href={pt.href}>{pt.label}</A> : <span className="font-semibold">{pt.label}</span>)}
-                  {pt.label ? ': ' : ''}{pt.text}
-                </>
-              ))} />
+            <Entry key={p.title} title={p.title} meta={p.venue} date={p.date}>
+              <div className="space-y-3 text-stone-700">{p.text.map(t => <p key={t}>{t}</p>)}</div>
+              {p.links && <p className="mt-2 text-sm">{p.links.map(l => <A key={l.href} href={l.href}>{l.label}</A>)}</p>}
             </Entry>
           ))}
         </Section>
