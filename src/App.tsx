@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { profile, honors, scholarships, education, research, projects, teaching, skills } from './data';
+import { profile, honors, scholarships, education, research, projects, teaching, teachingNote, skills } from './data';
 import { Section, Entry, A } from './components/Section';
 
 const nav = [
@@ -86,6 +86,7 @@ function App() {
         </Section>
 
         <Section id="teaching" title="Teaching Experience">
+          <p className="mb-7 text-stone-700">{teachingNote}</p>
           {teaching.map(t => (
             <Entry key={t.title} title={<A href={t.href}>{t.title}</A>} date={t.date}>
               <p className="text-stone-700">{t.text}</p>

@@ -1,8 +1,8 @@
 export const profile = {
   name: 'Areeba Khaliq',
   bio: [
-    'I work on machine learning for medical images, mostly skin conditions, and on the web and backend code that lets people actually use the models.',
-    'I am looking for graduate roles in AI/ML and web development.',
+    'I came from a pre-medical background, but during COVID-19 my brother introduced me to programming through the apps he was building. I started learning C, enjoyed it more than I expected, and that is what led me to choose Computer Science. I love experimenting and learning new things.',
+    'Today I work on machine learning for medical images, mostly skin conditions, and on the web and backend code that lets people use the models. I am looking for graduate roles in AI/ML and web development.',
   ],
   location: 'Lahore, Pakistan',
   email: 'areebakhaliq02@gmail.com',
@@ -54,6 +54,7 @@ export const education = {
       'AcneAI detects acne in a photo, classifies its sub-type and grades its severity. It runs three EfficientNet-B3 models and reaches 86% validation accuracy on the ACNE04 dataset.',
       'I converted the models to ONNX and served them through FastAPI, so inference takes under a second on CPU and a full request takes 2.4 seconds. Celery and Redis handle the slow work asynchronously, which cut database load by 40% under concurrent traffic.',
       'The app also has JWT authentication, a Supabase database, and an OCR and LLM (Groq) pipeline for ingredient scanning and a dermatology chatbot.',
+      'While building it, I was surprised by how much lighting, image quality and variation in skin appearance could change the predictions. I also learned that imbalanced data can introduce model bias, where good overall accuracy hides poor performance on less-represented cases. Building reliable medical AI takes more than high accuracy.',
     ],
   },
 };
@@ -94,6 +95,9 @@ export const projects: {
     ],
   },
 ];
+
+export const teachingNote =
+  'Teaching non-technical students has taught me that teaching is one of the best ways to learn. I want students to have the opportunity to explore programming for themselves and see whether they find it interesting, just as I did. I hope I can give others a similar chance.';
 
 export const teaching = [
   {
