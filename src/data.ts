@@ -1,5 +1,6 @@
 export const profile = {
   name: 'Areeba Khaliq',
+  headline: 'I started in pre-med and ended up building models that read skin.',
   bio: [
     'I came from a pre-medical background, but during COVID-19 my brother introduced me to programming through the apps he was building. I started learning C, enjoyed it more than I expected, and that is what led me to choose Computer Science. I love experimenting and learning new things.',
     'Today I work on machine learning for medical images, mostly skin conditions, and on the web and backend code that lets people use the models. I am looking for graduate roles in AI/ML and web development.',
@@ -12,34 +13,15 @@ export const profile = {
   cv: '/AREEBA_KHALIQ_CV.pdf',
 };
 
-export const honors: { title: string; date?: string; href: string; text: string }[] = [
-  { title: 'IELTS Academic, band 7.5', href: 'https://drive.google.com/file/d/1rmBHqS00jSuAChyveiUGJX1ich7lVLkV/view?usp=sharing', text: 'Scored 8.0 in Reading, 7.5 in Listening, 7.0 in Speaking and 6.5 in Writing.' },
-  { title: 'Lead, NASA Space Apps Challenge', href: 'https://drive.google.com/file/d/1v0WRvBQ3rAD1WQQpERLRLsR5xYhp_eBC/view?usp=sharing', text: 'Selected to lead the local edition of NASA’s global annual hackathon.' },
-  { title: 'International Computer Science Competition', date: '2026', href: 'https://drive.google.com/file/d/1gim7vej0O3MWin3bWTk1I6CaGjvVmYPw/view', text: 'Qualified the pre-qualification round.' },
-  { title: 'Meta Hacker Cup', date: '2025', href: 'https://www.facebook.com/codingcompetitions/hacker-cup/2025/certificate/1455866345523083', text: 'Reached Round 2, in the top 16% of participants worldwide.' },
-  { title: 'Harvard CS50x Puzzle Day', date: '2025, 2026', href: 'https://certificates.cs50.io/a98d2004-cf3e-444b-90cf-f55612396c77.pdf?size=letter', text: 'Scored 9 out of 9 two years in a row.' },
-];
-
-export const scholarships = [
-  {
-    title: 'PM Laptop Scheme Awardee',
-    org: 'HEC Prime Minister’s Youth Laptop Scheme, University of the Punjab',
-    date: 'Mar 2024',
-    note: 'Awarded a laptop for a 3.74/4.00 CGPA in the first semester.',
-  },
-  {
-    title: 'Merit Scholarship, Grades 11 & 12',
-    org: 'Punjab Group of Colleges, Faisalabad',
-    date: 'Aug 2019',
-    note: 'Full scholarship based on Grades 9 and 10 results (1072/1100).',
-  },
-  {
-    title: 'PEEF Merit Scholarship, Grades 9 & 10',
-    org: 'Punjab Educational Endowment Fund',
-    date: 'Sep 2017',
-    note: 'Awarded for Grade 8 results (483/500).',
-    href: 'https://drive.google.com/file/d/163laRwbdtxdJdr2fN999v0JxDJ6dW9_w/view?usp=sharing',
-  },
+export const recognition: { when?: string; title: string; text: string; href?: string }[] = [
+  { when: 'Sep 2017', title: 'PEEF Merit Scholarship, Grades 9 and 10', text: 'Awarded for Grade 8 results (483/500).', href: 'https://drive.google.com/file/d/163laRwbdtxdJdr2fN999v0JxDJ6dW9_w/view?usp=sharing' },
+  { when: 'Aug 2019', title: 'Merit Scholarship, Grades 11 and 12', text: 'Punjab Group of Colleges gave me a full scholarship based on my Grade 9 and 10 results (1072/1100).' },
+  { when: 'Mar 2024', title: 'PM Laptop Scheme Awardee', text: 'The HEC Prime Minister’s Youth Laptop Scheme gave me a laptop for a 3.74/4.00 CGPA in my first semester at the University of the Punjab.' },
+  { when: '2025', title: 'Meta Hacker Cup', text: 'Reached Round 2, in the top 16% of participants worldwide.', href: 'https://www.facebook.com/codingcompetitions/hacker-cup/2025/certificate/1455866345523083' },
+  { when: '2025, 2026', title: 'Harvard CS50x Puzzle Day', text: 'Scored 9 out of 9 two years in a row.', href: 'https://certificates.cs50.io/a98d2004-cf3e-444b-90cf-f55612396c77.pdf?size=letter' },
+  { when: '2026', title: 'International Computer Science Competition', text: 'Qualified the pre-qualification round.', href: 'https://drive.google.com/file/d/1gim7vej0O3MWin3bWTk1I6CaGjvVmYPw/view' },
+  { title: 'Lead, NASA Space Apps Challenge', text: 'Selected to lead the local edition of NASA’s global annual hackathon.', href: 'https://drive.google.com/file/d/1v0WRvBQ3rAD1WQQpERLRLsR5xYhp_eBC/view?usp=sharing' },
+  { title: 'IELTS Academic, band 7.5', text: 'Scored 8.0 in Reading, 7.5 in Listening, 7.0 in Speaking and 6.5 in Writing.', href: 'https://drive.google.com/file/d/1rmBHqS00jSuAChyveiUGJX1ich7lVLkV/view?usp=sharing' },
 ];
 
 export const education = {
@@ -48,12 +30,11 @@ export const education = {
   period: '2022 – 2026',
   gpa: { text: 'GPA 3.48 / 4.00', href: 'https://drive.google.com/file/d/15_Nm6c80gAzSdOT8N4o3dAMgI9JrA-dG/view?usp=sharing' },
   fyp: {
-    title: 'Final Year Project: AcneAI',
+    title: 'AcneAI',
     href: 'https://github.com/Areeba-Khaliq/acne-ai',
     text: [
       'AcneAI detects acne in a photo, classifies its sub-type and grades its severity. It runs three EfficientNet-B3 models and reaches 86% validation accuracy on the ACNE04 dataset.',
       'I converted the models to ONNX and served them through FastAPI, so inference takes under a second on CPU and a full request takes 2.4 seconds. Celery and Redis handle the slow work asynchronously, which cut database load by 40% under concurrent traffic.',
-      'The app also has JWT authentication, a Supabase database, and an OCR and LLM (Groq) pipeline for ingredient scanning and a dermatology chatbot.',
       'While building it, I was surprised by how much lighting, image quality and variation in skin appearance could change the predictions. I also learned that imbalanced data can introduce model bias, where good overall accuracy hides poor performance on less-represented cases. Building reliable medical AI takes more than high accuracy.',
     ],
   },

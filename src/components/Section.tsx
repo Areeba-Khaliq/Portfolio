@@ -1,29 +1,25 @@
 import React from 'react';
 
 export const Section = ({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
-  <section id={id} className="scroll-mt-14 py-10 border-t border-stone-300">
-    <div className="grid md:grid-cols-[10rem_1fr] gap-3 md:gap-10">
-      <h2 className="font-serif text-lg text-stone-900">{title}</h2>
-      <div>{children}</div>
-    </div>
+  <section id={id} className="scroll-mt-6 pt-14">
+    <h2 className="font-serif text-2xl text-stone-900 pb-2 mb-6 border-b border-stone-400">{title}</h2>
+    {children}
   </section>
 );
 
 export const Entry = ({ title, meta, date, children }: { title: React.ReactNode; meta?: string; date?: string; children?: React.ReactNode }) => (
-  <div className="mb-7 last:mb-0">
+  <div className="mb-9 last:mb-0">
     <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-      <h3 className="font-semibold text-stone-900">{title}</h3>
+      <h3 className="font-serif text-xl text-stone-900">{title}</h3>
       {date && <span className="text-sm text-stone-500">{date}</span>}
     </div>
-    {meta && <p className="text-sm text-stone-600 italic">{meta}</p>}
-    {children && <div className="mt-2">{children}</div>}
+    {meta && <p className="text-sm text-stone-500 italic">{meta}</p>}
+    {children && <div className="mt-3">{children}</div>}
   </div>
 );
 
-export const Bullets = ({ items }: { items: React.ReactNode[] }) => (
-  <ul className="list-disc pl-5 space-y-1.5 text-stone-700 marker:text-stone-400">
-    {items.map((t, i) => <li key={i}>{t}</li>)}
-  </ul>
+export const Prose = ({ items }: { items: string[] }) => (
+  <div className="space-y-3 text-stone-700">{items.map(t => <p key={t}>{t}</p>)}</div>
 );
 
 export const A = ({ href, children }: { href: string; children: React.ReactNode }) => (
