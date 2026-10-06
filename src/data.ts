@@ -10,7 +10,7 @@ export const profile = {
   phone: '+92 349 6547946',
   github: 'https://github.com/Areeba-Khaliq',
   linkedin: 'https://www.linkedin.com/in/areeba-khaliq/',
-  cv: '/AREEBA_KHALIQ_CV.pdf',
+  cv: `${import.meta.env.BASE_URL}AREEBA_KHALIQ_CV.pdf`,
 };
 
 export const recognition: { when?: string; title: string; text: string; href?: string }[] = [
@@ -29,15 +29,16 @@ export const education = {
   degree: 'BS Computer Science',
   period: '2022 – 2026',
   gpa: { text: 'GPA 3.48 / 4.00', href: 'https://drive.google.com/file/d/15_Nm6c80gAzSdOT8N4o3dAMgI9JrA-dG/view?usp=sharing' },
-  fyp: {
-    title: 'AcneAI',
-    href: 'https://github.com/Areeba-Khaliq/acne-ai',
-    text: [
-      'AcneAI detects acne in a photo, classifies its sub-type and grades its severity. It runs three EfficientNet-B3 models and reaches 86% validation accuracy on the ACNE04 dataset.',
-      'I converted the models to ONNX and served them through FastAPI, so inference takes under a second on CPU and a full request takes 2.4 seconds. Celery and Redis handle the slow work asynchronously, which cut database load by 40% under concurrent traffic.',
-      'While building it, I was surprised by how much lighting, image quality and variation in skin appearance could change the predictions. I also learned that imbalanced data can introduce model bias, where good overall accuracy hides poor performance on less-represented cases. Building reliable medical AI takes more than high accuracy.',
-    ],
-  },
+};
+
+export const acneai = {
+  title: 'AcneAI',
+  href: 'https://github.com/Areeba-Khaliq/acne-ai',
+  text: [
+    'AcneAI detects acne in a photo, classifies its sub-type and grades its severity. It runs three EfficientNet-B3 models and reaches 86% validation accuracy on the ACNE04 dataset.',
+    'I converted the models to ONNX and served them through FastAPI, so inference takes under a second on CPU and a full request takes 2.4 seconds. Celery and Redis handle the slow work asynchronously, which cut database load by 40% under concurrent traffic.',
+    'While building it, I was surprised by how much lighting, image quality and variation in skin appearance could change the predictions. I also learned that imbalanced data can introduce model bias, where good overall accuracy hides poor performance on less-represented cases. Building reliable medical AI takes more than high accuracy.',
+  ],
 };
 
 export const research = {

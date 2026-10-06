@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Relative base so the build works at a domain root (Vercel) and under /Portfolio/ (GitHub Pages).
 export default defineConfig({
+  base: './',
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
 });

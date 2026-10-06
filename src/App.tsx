@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { profile, education, recognition, research, projects, teaching, teachingNote, skills } from './data';
+import { profile, education, acneai, recognition, research, projects, teaching, teachingNote, skills } from './data';
 import { Section, Entry, Prose, A } from './components/Section';
 import { FederatedChart, AcneStack } from './components/Figures';
 
@@ -11,16 +10,12 @@ const nav = [
 ];
 
 function App() {
-  useEffect(() => {
-    document.title = 'Areeba Khaliq';
-  }, []);
-
   return (
     <div className="min-h-screen bg-[#f6f3ec] text-stone-800 font-sans text-[16px] leading-relaxed">
       <div className="max-w-5xl mx-auto px-6 lg:grid lg:grid-cols-[15rem_1fr] lg:gap-16">
 
         <aside className="lg:sticky lg:top-0 lg:self-start lg:h-screen lg:overflow-y-auto pt-12 pb-8 lg:pb-12">
-          <img src="/areeba_img (2).jpeg" alt="Areeba Khaliq" className="w-28 h-28 object-cover border border-stone-400" />
+          <img src={`${import.meta.env.BASE_URL}areeba.jpeg`} alt="Areeba Khaliq" className="w-28 h-28 object-cover border border-stone-400" />
           <h1 className="mt-5 font-serif text-3xl text-stone-900 leading-tight">{profile.name}</h1>
           <p className="mt-1 text-sm text-stone-500">{profile.location}</p>
 
@@ -55,10 +50,10 @@ function App() {
           </div>
 
           <Section id="work" title="Work">
-            <Entry title={<A href={education.fyp.href}>{education.fyp.title}</A>} meta="Final year project">
-              <Prose items={education.fyp.text.slice(0, 2)} />
+            <Entry title={<A href={acneai.href}>{acneai.title}</A>} meta="Final year project">
+              <Prose items={acneai.text.slice(0, 2)} />
               <AcneStack />
-              <Prose items={education.fyp.text.slice(2)} />
+              <Prose items={acneai.text.slice(2)} />
             </Entry>
 
             <Entry title={research.title} date={research.period}>
